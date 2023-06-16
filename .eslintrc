@@ -1,0 +1,44 @@
+{
+  "root": true,
+  "env": {
+    "browser": true, // browser global variables
+    "es2021": true // adds all ECMAScript 2021 globals and automatically sets the ecmaVersion parser option to 12.
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "eslint-config-airbnb-base",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ],
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      { "ignoreTypeReferences": true }
+    ],
+    "no-shadow": "off",
+    "no-console": "off",
+    "@typescript-eslint/no-shadow": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"],
+        "moduleDirectory": ["node_modules", "./src"]
+      }
+    }
+  },
+  "parserOptions": {
+    "project": ["./tsconfig.json", "./rollup.config.js"]
+  }
+}

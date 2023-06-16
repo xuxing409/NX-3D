@@ -1,0 +1,14 @@
+{
+  "liveServer.settings.port": 5503,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
